@@ -63,20 +63,12 @@ Acarain allows users to:
 
 2. **Set up the Frontend:**
 
-   ```bash
-Copy code
-cd frontend
-npm install
-npm run dev
-```
 
-3. **Set up the Backend:**
-
-```bash
-Copy code
-cd backend
-./mvnw spring-boot:run
-```
+    ```bash
+    cd frontend
+    npm install
+    npm run dev
+    ```
 
 4. **Create the MySQL database:**
 
@@ -99,18 +91,3 @@ Folder Structure for Frontend (Next.js)
     │   └── /utils             # Utility functions
     └── package.json
 ```
-
-### Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
-- Fork the repository.
-- Create your feature branch: `git checkout -b feature/AmazingFeature`
-- Commit your changes: `git commit -m 'Add some AmazingFeature'`
-- Push to the branch: `git push origin feature/AmazingFeature`
-- Open a pull request.
-
-### License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-Feel free to modify any sections to better fit your project specifics. 
