@@ -1,5 +1,5 @@
 import { fetchEvents } from '../../services/event';
-import { Event } from '../../types';
+import { Event } from '../../utils/types';
 
 const DashboardPage = async () => {
     const events: Event[] = await fetchEvents();

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchEvents } from '../services/event'; 
-import { Event } from '../types'; 
+import { Event } from '../utils/types'; 
 
 export const useEvents = (initialEvents: Event[] = []) => {
   const [events, setEvents] = useState<Event[]>(initialEvents);

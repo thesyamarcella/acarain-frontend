@@ -1,62 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+/* global.css */
 
-html, body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFFFFF;
+/* General Reset & Base */
+* {
     margin: 0;
     padding: 0;
-}
-
-.container {
-    padding: 40px;
-}
-
-.title {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 14px; 
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #FFFFFF;
+    color: #4A4A4A; 
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; 
+    font-weight: bold;
+  }
+  
+  /* Colors */
+  .text-primary {
     color: #8E44AD;
-}
-
-.card {
-    margin-bottom: 30px;
-    border-radius: 10px;
-}
-
-.card-header-title {
-    color: #8E44AD;
-}
-
-.card-content {
-    padding: 20px;
+  }
+  
+  .text-secondary {
+    color: #4A4A4A;
+  }
+  
+  .bg-primary {
+    background-color: #8E44AD;
+  }
+  
+  .bg-secondary {
     background-color: #F4D03F;
-}
+  }
+  
+  .bg-gradient-header {
+    background: linear-gradient(to right, #8E44AD, #3498DB);
+  }
 
-.button {
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem; 
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Components */
+  .card {
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .btn-primary {
+    border-width: 1px;
+    border-color: #F4D03F;
+    color: #F4D03F;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
     background-color: #F4D03F;
     color: #FFFFFF;
+  }
+  
+  /* Typography */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-large {
+    font-size: 1.125rem;
+  }
+  
+  .text-small {
+    font-size: 0.875rem;
+  }
+  
+ 
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Media Queries */
+  @media (min-width: 640px) {
+    .grid-cols-1 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .grid-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+.header {
+    background: linear-gradient(to right, #8E44AD, #3498DB); /* Gradient background */
+    color: white;
+  }
+  
+  .header .logo a {
+    font-size: 1.5rem;
     font-weight: bold;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #3498DB;
-}
-
-.notification.is-danger {
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-.navbar {
-  background-color: #8E44AD;
-  padding: 1rem;
-  position: sticky; 
-  top: 0; 
-  z-index: 1000; 
-}
-
-.navbar-item {
-  color: #FFFFFF;
-} 
-
-.navbar-item:hover {
-  background-color: #3498DB; 
-}
+  }
+  
+  .header .nav-links a {
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .header .nav-links a:hover {
+    color: #F4D03F; 
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .footer .footer-links a {
+    font-size: 0.875rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .footer-links a:hover {
+    color: #F4D03F; /* Hover effect on links */
+  }
+  
+  .footer .footer-contact p {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .footer .flex {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .footer .flex {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  
