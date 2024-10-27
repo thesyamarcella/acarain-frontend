@@ -1,27 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.container {
+    padding: 40px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.title {
+    color: #8E44AD;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.card {
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.card-header-title {
+    color: #8E44AD;
+}
+
+.card-content {
+    padding: 20px;
+    background-color: #F4D03F;
+}
+
+.button {
+    background-color: #F4D03F;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #3498DB;
+}
+
+.notification.is-danger {
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
